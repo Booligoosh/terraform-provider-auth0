@@ -61,3 +61,16 @@ resource "auth0_email_provider" "smtp_email_provider" {
     ms365_client_secret = "ms365_client_secret"
   }
 }
+
+
+
+# This is an example on how to set up the email provider with a custom action.
+resource "auth0_email_provider" "custom_email_provider" {
+  name                 = "custom"
+  enabled              = true
+  default_from_address = "accounts@example.com"
+
+  credentials {
+    
+  }
+}
